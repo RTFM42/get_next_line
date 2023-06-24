@@ -1,0 +1,67 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# For Debug
+test.c
+
+# vim swp
+*.swp
+*.swo
+
+# tester
+ft_printf_tester
+test.c
+
+# ## MEMO ##
+# git@vogsphere-v2.42tokyo.jp:vogsphere/intra-uuid-94b6b6e0-6f2f-4770-9d5e-9f401a9cf493-4886588-yushsato
+# git@github.com:RTFM42/ft_printf.git
