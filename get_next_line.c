@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:33:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/06 22:37:17 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/06 22:50:53 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*gnl_until_read(int fd, char c)
 		free(ret);
 		ret = cache;
 		cache = ft_strchr(buf, c);
-		if (len <= 0 || cahce != NULL)
+		if (len <= 0 || cache != NULL)
 			break ;
 	}
 	free(buf);
