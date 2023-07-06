@@ -6,13 +6,13 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:33:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/06 23:05:13 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/06 23:32:31 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*gnl_until_read(int fd, char c)
+static char	*gnl_readchr(int fd, char c)
 {
 	char	*buf;
 	char	*cache;
