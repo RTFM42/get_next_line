@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:33:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/06 23:32:31 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/07 00:34:57 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,10 @@ static char	*gnl_readchr(int fd, char c)
 
 char	*get_next_line(int fd)
 {
-	static char	*left;
+	static char	*str;
 
-	return (gnl_until_read(fd, '\n'));
+	str = gnl_readchr(fd, '\n');
+	return (str);
 }
 
 #include <stdio.h>
