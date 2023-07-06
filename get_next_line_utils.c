@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@doche.io>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:29:49 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/06 22:51:50 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/06 22:56:42 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static size_t	ft_strlen(const char *str)
 {
 	size_t	len;
 
+	len = 0;
 	while (str[len])
 		len++;
 	return (len);
