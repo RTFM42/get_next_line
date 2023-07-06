@@ -6,13 +6,13 @@
 /*   By: yushsato <yushsato@doche.io>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:29:49 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/06 22:47:37 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/06 22:51:50 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static size_t	ft_strlen(char *str)
+static size_t	ft_strlen(const char *str)
 {
 	size_t	len;
 

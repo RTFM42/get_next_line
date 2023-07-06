@@ -6,14 +6,14 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:34:47 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/06 22:50:10 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/06 22:53:22 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE = 1024
+#  define BUFFER_SIZE 1024
 # endif
 # include <stdlib.h>
 # include <unistd.h>
