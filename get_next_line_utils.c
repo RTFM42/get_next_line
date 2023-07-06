@@ -6,13 +6,13 @@
 /*   By: yushsato <yushsato@doche.io>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:29:49 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/05 00:34:47 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/06 22:47:37 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *str)
+static size_t	ft_strlen(char *str)
 {
 	size_t	len;
 
@@ -21,7 +21,7 @@ size_t	ft_strlen(char *str)
 	return (len);
 }
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+static void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*s;
 	char	*d;
@@ -57,15 +57,15 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	return (ret);
 }
 
-char	*ft_strdup(const char *s1)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	len;
-	char	*ret;
+	const char	cc = (const char)c;
 
-	len = ft_strlen(s1) + 1;
-	ret = (char *)malloc(len);
-	if (!ret)
-		return (NULL);
-	ft_memcpy(ret, s1, len);
-	return (ret);
+	while (*s != cc)
+	{
+		if (*s == '\0')
+			return (0);
+		s++;
+	}
+	return ((char *)s);
 }
