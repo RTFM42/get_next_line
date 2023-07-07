@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:33:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/08 00:40:24 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/08 00:40:58 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*get_next_line(int fd)
 	char		*cache;
 	char		*ret;
 	char		*ptr;
-	
+
 	if (pre == NULL)
 		pre = ft_calloc(1, 1);
 	cache = gnl_readchr(fd, pre, '\n');
