@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:33:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/08 00:15:55 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/08 00:40:24 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,19 @@ char	*get_next_line(int fd)
 	if (pre == NULL)
 		pre = ft_calloc(1, 1);
 	cache = gnl_readchr(fd, pre, '\n');
-	ptr = ft_strchr(cache, '\n');
+	if (cache == NULL)
+		return (NULL);
+	ptr = cache;
+	while (*ptr != '\0' && *ptr != '\n')
+		ptr++;
+	if (*ptr == '\n')
+		ptr++;
 	free(pre);
-	if (ptr == NULL)
-	{
-		pre = ft_calloc(1, 1);
-		ret = cache;
-	}
+	pre = ft_calloc(ft_strlen(ptr) + 1, 1);
+	ft_memcpy(pre, ptr, ft_strlen(ptr));
+	ret = ft_calloc(ptr - cache + 1, 1);
+	ft_memcpy(ret, cache, ptr - cache);
+	free(cache);
 	return (ret);
 }
 
