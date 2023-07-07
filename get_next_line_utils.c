@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@doche.io>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:29:49 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/07 16:42:28 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/08 00:17:13 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	const char	cc = (const char)c;
 
-	while (*s != cc)
+	while (s != NULL && *s != cc)
 	{
 		if (*s == '\0')
 			return (0);
