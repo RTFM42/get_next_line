@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:33:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/08 00:41:38 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/08 00:59:06 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static char	*gnl_readchr(int fd, char *pre, char c)
 	char	*buf;
 	char	*cache;
 	char	*ret;
-	size_t	len;
+	ssize_t	len;
 
 	cache = ft_strjoin("", pre);
 	len = 1;
@@ -74,7 +74,8 @@ char	*get_next_line(int fd)
 // 	char	*line;
 // 
 // 	line = "";
-// 	fd = open("get_next_line.h", O_RDONLY);
+// 	// fd = open("./gnlTester/files/empty", O_RDONLY);
+// 	fd = 99;
 // 	while (line)
 // 	{
 // 		line = get_next_line(fd);
