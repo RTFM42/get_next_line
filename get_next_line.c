@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:33:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/10 10:41:14 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/10 10:46:09 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static char	*gnl_readchr(int fd, char *cache)
 	char	*ret;
 	char	*tmp;
 	char	*buf;
-	ssize_t len;
+	ssize_t	len;
 
 	buf = malloc(BUFFER_SIZE + 1);
 	ret = gnl_concat(cache, 0x0);
