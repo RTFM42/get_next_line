@@ -6,9 +6,11 @@
 /*   By: yushsato <yushsato@doche.io>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:29:49 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/10 10:38:19 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/10 10:43:49 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "./get_next_line.h"
 
 char	*ft_strchr(const char *s, int c)
 {
