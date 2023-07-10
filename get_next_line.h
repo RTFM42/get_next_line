@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:34:47 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/08 00:19:21 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:31:07 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@
 # include <unistd.h>
 # include <stdio.h>
 
-size_t	ft_strlen(const char *str);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-char	*ft_strjoin(const char *s1, const char *s2);
-char	*ft_strchr(const char *s, int c);
-void	*ft_calloc(size_t count, size_t size);
+typedef struct s_cache
+{
+	char	*pre;
+	char	*index;
+	char	*suf;
+}	t_cache;
+
 char	*get_next_line(int fd);
 
 #endif
