@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:33:05 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/10 10:46:09 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/10 10:46:33 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,6 @@ char	*get_next_line(int fd)
 	free(tmp);
 	return (ret);
 }
-
-#include <stdio.h>
-#include <fcntl.h>
 
 int	main(void)
 {

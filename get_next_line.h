@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 21:34:47 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/10 10:38:49 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/10 10:46:44 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <fcntl.h>
 
 char	*ft_strchr(const char *s, int c);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
