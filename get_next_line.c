@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:18:19 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 15:55:51 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 15:58:33 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,10 @@ char	*gnl_uread(int fd, char *cache)
 	}
 	free(buf);
 	if (len < 0 && cache != NULL)
+	{
 		free(cache);
+		cache = NULL;
+	}
 	if (cache == NULL || len < 0)
 		return (NULL);
 	return (cache);
