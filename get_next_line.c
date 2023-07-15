@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:18:19 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 15:58:33 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 16:15:51 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,16 @@ char	*gnl_strjoin(char *target, char *str)
 	return (ret);
 }
 
-char	*gnl_uread(int fd, char *cache)
+char	*gnl_nread(int fd, char *cache)
 {
 	char	*buf;
 	ssize_t	len;
 
 	buf = malloc(BUFFER_SIZE + 1);
-	if (!buf)
+	if(!buf)
 		return (NULL);
-	while (cache == NULL || ft_strchr(cache, '\n') == NULL)
+	len = 1;
+	while (gnl_strchr(cache, '\n') == NULL)
 	{
 		len = read(fd, buf, BUFFER_SIZE);
 		if (len <= 0)
@@ -60,12 +61,9 @@ char	*gnl_uread(int fd, char *cache)
 	}
 	free(buf);
 	if (len < 0 && cache != NULL)
-	{
 		free(cache);
+	if (len < 0)
 		cache = NULL;
-	}
-	if (cache == NULL || len < 0)
-		return (NULL);
 	return (cache);
 }
 
@@ -73,7 +71,7 @@ char	*get_next_line(int fd)
 {
 	static char	*cache;
 
-	cache = gnl_uread(fd, cache);
+	cache = gnl_nread(fd, cache);
 	return (cache);
 }
 

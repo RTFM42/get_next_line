@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:18:07 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 15:51:40 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 16:09:27 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <fcntl.h>
 
 size_t	ft_strlen(const char *str);
-char	*ft_strchr(const char *s, int c);
+char	*gnl_strchr(const char *s, int c);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 char	*get_next_line(int fd);
 

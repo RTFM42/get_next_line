@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:44:09 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 15:50:18 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 16:09:19 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ size_t	ft_strlen(const char *str)
 	return (len);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*gnl_strchr(const char *s, int c)
 {
 	const char	cc = (const char)c;
 	
+	if (s == NULL)
+		return (NULL);
 	while (*s != cc)
 	{
 		if (*s == '\0')
