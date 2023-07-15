@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:18:19 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 21:06:37 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 21:18:42 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,18 +97,18 @@ char	*get_next_line(int fd)
 	return (ret);
 }
 
-int	main(void)
-{
-	int		fd;
-	char	*line = "";
-
-	fd = open("./gnlTester/files/42_with_nl", O_RDONLY);
-	while (line)
-	{
-		line = get_next_line(fd);
-		printf("%s", line);
-		if (line)
-			free(line);
-	}
-	return (0);
-}
+//int	main(void)
+//{
+//	int		fd;
+//	char	*line = "";
+//
+//	fd = open("./gnlTester/files/42_with_nl", O_RDONLY);
+//	while (line)
+//	{
+//		line = get_next_line(fd);
+//		printf("%s", line);
+//		if (line)
+//			free(line);
+//	}
+//	return (0);
+//}
