@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:18:19 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 16:46:25 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 21:06:37 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char	*gnl_nread(int fd, char *cache)
 	char	*buf;
 	ssize_t	len;
 
+	if (BUFFER_SIZE < 0)
+		return (NULL);
 	buf = malloc(BUFFER_SIZE + 1);
 	if (!buf)
 		return (NULL);
@@ -95,18 +97,18 @@ char	*get_next_line(int fd)
 	return (ret);
 }
 
-// int	main(void)
-// {
-// 	int		fd;
-// 	char	*line = "";
-// 
-// 	fd = open("./gnlTester/files/42_with_nl", O_RDONLY);
-// 	while (line)
-// 	{
-// 		line = get_next_line(fd);
-// 		printf("start: %s", line);
-// 		if (line)
-// 			free(line);
-// 	}
-// 	return (0);
-// }
+int	main(void)
+{
+	int		fd;
+	char	*line = "";
+
+	fd = open("./gnlTester/files/42_with_nl", O_RDONLY);
+	while (line)
+	{
+		line = get_next_line(fd);
+		printf("%s", line);
+		if (line)
+			free(line);
+	}
+	return (0);
+}
