@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:18:19 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 16:40:12 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 16:46:25 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*gnl_strjoin(char *target, char *str)
 		{
 			ft_memcpy(ret, target, tlen);
 			ft_memcpy(ret + tlen, str, slen);
-			ret[tlen+slen] = '\0';
+			ret[tlen + slen] = '\0';
 		}
 	}
 	if (target)
@@ -46,7 +46,7 @@ char	*gnl_nread(int fd, char *cache)
 	ssize_t	len;
 
 	buf = malloc(BUFFER_SIZE + 1);
-	if(!buf)
+	if (!buf)
 		return (NULL);
 	len = 1;
 	while (gnl_strchr(cache, '\n') == NULL)
