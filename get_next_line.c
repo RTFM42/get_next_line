@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:18:19 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 15:43:56 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 15:55:51 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*gnl_uread(int fd, char *cache)
 	buf = malloc(BUFFER_SIZE + 1);
 	if (!buf)
 		return (NULL);
-	while (ft_strchr(cache, '\n') == NULL)
+	while (cache == NULL || ft_strchr(cache, '\n') == NULL)
 	{
 		len = read(fd, buf, BUFFER_SIZE);
 		if (len <= 0)
