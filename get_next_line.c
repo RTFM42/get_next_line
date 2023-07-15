@@ -6,7 +6,7 @@
 /*   By: yushsato <yushsato@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:18:19 by yushsato          #+#    #+#             */
-/*   Updated: 2023/07/15 16:15:51 by yushsato         ###   ########.fr       */
+/*   Updated: 2023/07/15 16:40:12 by yushsato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,22 +70,43 @@ char	*gnl_nread(int fd, char *cache)
 char	*get_next_line(int fd)
 {
 	static char	*cache;
+	char		*ptr;
+	char		*tmp;
+	char		*ret;
 
 	cache = gnl_nread(fd, cache);
-	return (cache);
-}
-
-int	main(void)
-{
-	int		fd;
-	char	*line = "";
-
-	fd = open("./get_next_line.h", O_RDONLY);
-	while (line)
+	if (cache == NULL)
+		return (NULL);
+	ptr = gnl_strchr(cache, '\n');
+	if (ptr == NULL)
 	{
-		line = get_next_line(fd);
-		printf("%s", line);
-		free(line);
+		ptr = cache;
+		cache = NULL;
+		return (ptr);
 	}
-	return (0);
+	tmp = gnl_strjoin(NULL, ptr + 1);
+	ret = malloc(ptr - cache + 2);
+	if (ret == NULL)
+		return (NULL);
+	ret[ptr - cache + 1] = '\0';
+	ft_memcpy(ret, cache, ptr - cache + 1);
+	free(cache);
+	cache = tmp;
+	return (ret);
 }
+
+// int	main(void)
+// {
+// 	int		fd;
+// 	char	*line = "";
+// 
+// 	fd = open("./gnlTester/files/42_with_nl", O_RDONLY);
+// 	while (line)
+// 	{
+// 		line = get_next_line(fd);
+// 		printf("start: %s", line);
+// 		if (line)
+// 			free(line);
+// 	}
+// 	return (0);
+// }
